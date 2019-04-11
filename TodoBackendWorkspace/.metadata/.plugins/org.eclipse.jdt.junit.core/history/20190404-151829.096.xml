@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TodoTest" project="TodoJPA" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.skilldistillery.todoapp.jpatests.TodoTest" time="6.394" displayname="TodoTest" uniqueid="[engine:junit-jupiter]/[class:com.skilldistillery.todoapp.jpatests.TodoTest]">
+    <testcase name="test_todo_exists_in_db" classname="com.skilldistillery.todoapp.jpatests.TodoTest" time="6.394" displayname="test_todo_exists_in_db()" uniqueid="[engine:junit-jupiter]/[class:com.skilldistillery.todoapp.jpatests.TodoTest]/[method:test_todo_exists_in_db()]"/>
+  </testsuite>
+</testrun>

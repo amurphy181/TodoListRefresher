@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserTest" project="TodoJPA" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.skilldistillery.todoapp.jpatests.UserTest" time="6.468" displayname="UserTest" uniqueid="[engine:junit-jupiter]/[class:com.skilldistillery.todoapp.jpatests.UserTest]">
+    <testcase name="test_user_has_todos" classname="com.skilldistillery.todoapp.jpatests.UserTest" time="6.379" displayname="test_user_has_todos()" uniqueid="[engine:junit-jupiter]/[class:com.skilldistillery.todoapp.jpatests.UserTest]/[method:test_user_has_todos()]"/>
+    <testcase name="test_user_has_information" classname="com.skilldistillery.todoapp.jpatests.UserTest" time="0.089" displayname="test_user_has_information()" uniqueid="[engine:junit-jupiter]/[class:com.skilldistillery.todoapp.jpatests.UserTest]/[method:test_user_has_information()]"/>
+  </testsuite>
+</testrun>

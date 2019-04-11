@@ -1,0 +1,5 @@
+package com.skilldistillery.todoapp.jpatests;
+
+public class TodoTest {
+
+}

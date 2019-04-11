@@ -1,0 +1,38 @@
+package com.skilldistillery.todoapp.entities;
+
+import java.sql.Date;
+
+import javax.persistence.*;
+
+public class Todo {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	private String task;
+	private String description;
+	private boolean completed;
+	@Column(name="user_id")
+	private Integer userId;
+	@Column(name="due_date")
+	private String dueDate;
+	@Column(name="complete_date")
+	private String completeDate;
+	@Column(name="created_at")
+	private Date createdAt;
+	@Column(name="updated_at")
+	private Date updatedAt;
+	
+	
+	id            | int(11)      | NO   | PRI | NULL                | auto_increment              |
+	| task          | varchar(55)  | NO   |     | NULL                |                             |
+	| description   | text         | YES  |     |                     |                             |
+	| completed     | tinyint(1)   | YES  |     | 0                   |                             |
+	| user_id       | int(11)      | NO   | MUL | NULL                |                             |
+	| due_date      | varchar(50)  | YES  |     | NULL                |                             |
+	| complete_date | varchar(50)  | YES  |     | NULL                |                             |
+	| created_at    | timestamp    | NO   |     | 0000-00-00 00:00:00 |                             |
+	| updated_at   
+
+}

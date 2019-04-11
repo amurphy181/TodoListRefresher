@@ -1,0 +1,15 @@
+package com.skilldistillery.todoapp.repositories;
+
+import java.util.Set;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.skilldistillery.todoapp.entities.Todo;
+import com.skilldistillery.todoapp.entities.User;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+
+	User findByUsername(String userName);
+	Set<Todo> findTodosByUsername(String userName);
+}
