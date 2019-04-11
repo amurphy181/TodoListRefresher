@@ -1,0 +1,45 @@
+<h1>{{ title }} {{ countTotalTodos() }}</h1>
+<h2 [style.color]="completedRatio()">{{ completedTodos }} completed</h2>
+
+
+<table *ngIf="!selected">
+  <tr style="font-weight: bold">
+    <td>Task</td>
+    <td>Mark</td>
+    <td>Completed</td>
+  </tr>
+  <tr *ngFor="let todo of todos">
+      <td (click)="displayTodo(todo)">{{ todo.task }}</td>
+      <td><input type="checkbox" [(ngModel)]="todo.completed" (click)="todo.completed = true; refreshCompletion()"/></td>
+      <td>{{ todo.completed }}</td>
+      <button type="button" class="btn btn-danger" (click)="deleteTodo(todo.id)">X</button>
+  </tr>
+</table>
+
+<form #newTodoForm = "ngForm" *ngIf="!selected">
+  Task: <input type="text" name="task" [(ngModel)]="newTodo.task" />
+  Description: <input type="text" name="description" [(ngModel)]="newTodo.description" />
+  <input type="submit" (click)="addTodo(newTodoForm)" value="New Task">
+</form>
+
+<button (click)="everythingIsCompleted()">Everything is Awesome!</button>
+<button (click)="everythingIsIncomplete()">Oh No, Full Todo List</button>
+
+<div *ngIf="selected && !editTodo">
+  <h3>{{selected.task}}</h3>
+  <p>Id: {{selected.id}}</p>
+  <p>Completed: {{selected.completed}}</p>
+  <p>Description: {{selected.description}}</p>
+  <button (click)="displayTable()">Show Full Table</button>
+  <button (click)="setEditTodo()">Edit Todo</button><br>
+  <button *ngIf="!selected.completed" (click)="changeCompletedStatus()">Mark as Complete</button>
+  <button *ngIf="selected.completed" (click)="changeCompletedStatus()">Mark as Incomplete</button>
+</div>
+
+<form *ngIf="editTodo">
+  Task: <input type="text" name="task" [(ngModel)]="editTodo.task"><br>
+  Description: <input type="text" name="description" [(ngModel)]="editTodo.description"><br>
+  <input type="checkbox" name="completed" [(ngModel)]="editTodo.completed">
+  <input type="submit" value="Save" (click)="updateTodo(editTodo)">
+  <input type="submit" value="Cancel" (click)="editTodo = null">
+</form>
